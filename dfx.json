@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "Universe_backend": {
+      "main": "src/Universe_backend/main.mo",
+      "type": "motoko"
+    },
+    "nft":{
+      "main":"src/NFT/nft.mo",
+      "type":"motoko"
+    },
+    "Universe_frontend": {
+      "dependencies": [
+        "Universe_backend"
+      ],
+      "source": [
+        "src/Universe_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "Universe_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
